@@ -36,7 +36,7 @@
                                                                                                                                                                                                                 style="text-align:left;border-radius:0%;"
                                                                                                                                                                                                             @endif >
                                                             <datalist id="datalistOptions">
-                                                                @foreach (\App\Models\Ville::orderBy('ville','asc')->get() as $value)
+                                                                @foreach ($villes as $value)
                                                                     <option   value="{{$value->ville}}">
                                                                 @endforeach
                                                             </datalist>
@@ -54,7 +54,7 @@
                                                                                                                                                                                         style="text-align:left;border-radius:0%;"
                                                                                                                                                                                     @endif >
                                                             <datalist id="datalistOptions">
-                                                                @foreach (\App\Models\Ville::orderBy('ville','asc')->get() as $value)
+                                                                @foreach ($villes as $value)
                                                                     <option   value="{{$value->ville}}">
                                                                 @endforeach
                                                             </datalist>
