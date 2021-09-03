@@ -13,7 +13,7 @@ class CreateVilleTable extends Migration
      */
     public function up()
     {
-        Schema::create('ville', function (Blueprint $table) {
+        Schema::create('villes', function (Blueprint $table) {
             $table->id();
             $table->string('ville');
             $table->string('region');
