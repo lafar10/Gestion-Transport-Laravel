@@ -15,7 +15,8 @@ class FrontController extends Controller
 
     public function triporteur()
     {
-        return view('Front.triporteur');
+        $villes = Ville::orderBy('ville', 'asc')->get();
+        return view('Front.triporteur', compact('villes'));
     }
 
     public function camion()

@@ -36,9 +36,9 @@
                                                                                                                                                                                                                 style="text-align:left;border-radius:0%;"
                                                                                                                                                                                                             @endif >
                                                             <datalist id="datalistOptions">
-
-                                                                    <option   value="">
-                                                                @
+                                                                @foreach ($villes as $value)
+                                                                    <option   value="{{$value->ville}}">
+                                                                @endforeach
                                                             </datalist>
                                                             @if($errors->has('lieu_ramassage'))
                                                                 <div class="error" style="color:red;">{{ $errors->first('lieu_ramassage') }}</div>
@@ -54,9 +54,9 @@
                                                                                                                                                                                         style="text-align:left;border-radius:0%;"
                                                                                                                                                                                     @endif >
                                                             <datalist id="datalistOptions">
-
-                                                                    <option   >
-
+                                                                @foreach ($villes as $value)
+                                                                    <option   value="{{$value->ville}}">
+                                                                @endforeach
                                                             </datalist>
                                                             @if($errors->has('lieu_depose'))
                                                                 <div class="error" style="color:red;">{{ $errors->first('lieu_depose') }}</div>
